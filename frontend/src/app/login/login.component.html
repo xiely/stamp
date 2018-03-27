@@ -1,0 +1,38 @@
+
+<div class="login">
+    <div class="logo">
+        <img src="../../assets/images/logo.png" alt="logo" class="logo-img">
+    </div>
+    <div class="bg-wrap">
+        <div class="left-wrap">
+            <img src="../../assets/images/stamp_info.jpg" alt="stamp_info" class="login-img">
+        </div>
+        <form class="login-wrap" [formGroup]="loginForm">
+            <div id="error-tip" class="error-tip" *ngIf="!isShowTitle">
+                    {{errString}}
+            </div>
+            <p class="title" *ngIf="isShowTitle">管理平台</p>
+            <div class="user-name">
+                <input formControlName="userName" [(ngModel)]="userName"
+                (blur)="checkEmpty('username')" (input)="onPhoneInput($event)"
+                (compositionstart)="oncomposition($event, 'start')" (compositionend)="oncomposition($event, 'end')"
+                maxlength="11" type="text" name="userName" class="login-input" placeholder="请输入您的手机号" pattern="^1(3|4|5|6|7|8)\d{9}$">
+                <i class="remove icon clear-icon" (click)="userName=''"></i>
+            </div>
+            <div class="password">
+                <input formControlName="password" [(ngModel)]="password"
+                    (keyup.enter)="onLoginBtnClicked()"  (blur)="checkEmpty('password')"
+                    type="text" name="password" class="login-input" placeholder="请输入您的密码"
+                    maxlength="16" pattern="^[0-9A-Za-z]{6,16}$" autocomplete="false" 
+                    onpaste="return false" oncontextmenu="return false" oncopy="return false" 
+                    oncut="return false" #passwordInput>
+                <div class="eye-box" (click)="switchPwd(passwordInput)">
+                    <img src="../../assets/images/icon_on.png" *ngIf="passwordInput.type === 'password'">
+                    <img src="../../assets/images/icon_off.png" *ngIf="passwordInput.type === 'text'">
+                </div>
+            </div>
+            <button type="button" class="login-input login-button" (click)="onLoginBtnClicked()">登 录</button>
+        </form>
+    </div>
+</div>
+

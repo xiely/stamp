@@ -1,0 +1,151 @@
+/* You can add global styles to this file, and also import other style files */
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: "微软雅黑", Helvetica, sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 14px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
+input,
+textarea,
+select,
+button,
+option {
+    font-family: "微软雅黑", Helvetica, sans-serif;
+}
+
+img {
+    border: none;
+}
+
+.ant-spin-nested-loading > div > .ant-spin {
+    max-height: none !important;
+}
+.mat-wrap .ant-input{
+    height: 44px;
+    font-size: 14px;
+}
+.mat-wrap .ant-input:focus {
+    box-shadow: none;
+}
+.mat-wrap .ant-calendar-picker:hover
+.mat-wrap .ant-input:hover {
+    border-color: #d9d9d9;
+}
+
+.mat-footer .ant-modal-content{
+    position: absolute;
+    width: 300px;
+    left: 50%;
+    top: 50%;
+    margin-top: 300px;
+    margin-left: -150px;
+}
+.mat-footer .ant-modal-title{
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+.mat-footer .ant-modal-header{
+    border-bottom: 0;
+    padding: 30px 16px 4px;
+}
+.mat-footer .ant-modal-body{
+    padding: 0 48px;
+}
+.mat-footer .ant-modal-footer{
+    border-top: 0;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.mat-footer .ant-btn-lg{
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+}
+.mat-footer .ant-btn-ghost{
+
+}
+.mat-footer .ant-btn-primary {
+    color: rgba(0, 0, 0, 0.65);
+    background-color: transparent;
+    border-color: #d9d9d9;
+}
+
+.mat-footer .ant-btn-ghost {
+    color: #fff;
+    background-color: #108ee9;
+    border-color: #108ee9;
+}
+
+.mat-footer .ant-btn-primary:hover, 
+.mat-footer .ant-btn-primary:focus {
+    color: #108ee9;
+    background-color: transparent;
+    border-color: #108ee9;
+}
+.mat-footer .ant-btn-ghost:hover, 
+.mat-footer .ant-btn-ghost:focus {
+    color: #fff;
+    background-color: #49a9ee;
+    border-color: #49a9ee;
+}
+.progress-wrap .ant-progress{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-150px, -150px);
+}
+.progress-wrap .ant-progress-circle .ant-progress-text{
+    font-size: 30px;
+    left: 50%;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.8);
+    transform: translate(-50%, -50%);
+}
+.refuse-tip .ant-popover-inner-content {
+    padding: 20px 17px;
+    border-radius: 4px;
+    background: rgba(51,51,51,.8);
+}
+.refuse-tip .ant-popover-arrow{
+    display:none;
+}
+.ant-message .anticon {
+    font-size: 30px!important;
+}
+.ant-message {
+    font-size: 30px!important;
+}
