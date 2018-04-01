@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>智能印章后台管理系统</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="login">
+        <div class="login-top">
+            <img src="./images/logo.png" alt="logo" class="logo-img">
+            <div class="top-title">智能印章后台管理系统</div>
+            <a href="javascript:;" class="company-login">企业登录</a>
+        </div>
+        <div class="bg-wrap">
+            <div class="left-wrap">
+                <img src="./images/stamp_info.jpg" alt="stamp_info" class="login-img">
+            </div>
+            <form class="login-wrap">
+                <div id="error-tip" class="error-tip">
+                        错误提示
+                </div>
+                <p class="title"></p>
+                <div class="user-name">
+                    <input maxlength="11" type="text" name="userName" class="login-input" placeholder="请输入您的手机">
+                    <i class="remove icon clear-icon"></i>
+                </div>
+                <div class="password">
+                    <input type="text" name="password" class="login-input" placeholder="请输入您的密码"
+                        maxlength="16" autocomplete="false" >
+                    <div class="eye-box">
+                        <img src="./images/icon_on.png" >
+                        <!-- <img src="../../assets/images/icon_off.png"> -->
+                    </div>
+                </div>
+                <button type="button" class="login-input login-button">登 录</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

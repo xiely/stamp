@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: Helvetica,Helvetica,Hiragino Sans GB,Microsoft Yahei,Heiti SC,WenQuanYi Micro Hei,Arial,sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 16px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
+input,
+textarea,
+select,
+button,
+option {
+    font-family: "微软雅黑", Helvetica, sans-serif;
+}
+
+img {
+    border: none;
+}
