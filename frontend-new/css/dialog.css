@@ -1,0 +1,44 @@
+.boring-tab-handles > * {
+    cursor: pointer;
+}
+.boring-tab-panels > * {
+    display: none;
+}
+.boring-tab-panels .boring-tab-current{
+    display: block;
+}
+
+.boring-dialog-mask,
+.boring-dialog {
+    position: fixed;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.boring-dialog-mask{
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: #000;
+    background: rgba(0, 0, 0, 0.4);
+}
+.boring-dialog{
+    left: 50%;
+    top: 50%;
+    max-width: 100%;
+    max-width: 100%;
+    margin: auto;
+    overflow: auto;
+    -webkit-transition-property: all, margin;
+    transition-property: all, margin;
+    -webkit-transition-duration: 0.3s, 0s;
+    transition-duration: 0.3s, 0s;
+}
+.boring-dialog-mask-opened,
+.boring-dialog-opened{
+    visibility: visible;
+    opacity: 1;
+}

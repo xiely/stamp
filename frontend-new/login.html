@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>智能印章后台管理系统</title>
+    <link rel="stylesheet" href="css/dialog.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
@@ -19,26 +20,46 @@
             <div class="left-wrap">
                 <img src="./images/stamp_info.jpg" alt="stamp_info" class="login-img">
             </div>
-            <form class="login-wrap">
-                <div id="error-tip" class="error-tip">
+            <form class="login-wrap" id="login-form">
+                <!-- <div id="error-tip" class="error-tip">
                         错误提示
+                </div> -->
+                <div class="login-form-header boring-tab-handles">
+                    <div class="login-method-nav">扫描登录</div>
+                    <div class="login-method-nav">用户名密码登录</div>
                 </div>
-                <p class="title"></p>
-                <div class="user-name">
-                    <input maxlength="11" type="text" name="userName" class="login-input" placeholder="请输入您的手机">
-                    <i class="remove icon clear-icon"></i>
-                </div>
-                <div class="password">
-                    <input type="text" name="password" class="login-input" placeholder="请输入您的密码"
-                        maxlength="16" autocomplete="false" >
-                    <div class="eye-box">
-                        <img src="./images/icon_on.png" >
-                        <!-- <img src="../../assets/images/icon_off.png"> -->
+                <div class="boring-tab-panels">
+                    <div class="login-method-content">
+                        <div class="login-qrcode-wrap">
+                            <img src="./images/06.png" alt="二维码" class="login-qrcode">
+                        </div>
+                        <p class="qrcode-login-tip">请扫码登录</p>
+                    </div>
+                    <div class="login-method-content">
+                        <div class="user-name">
+                            <input maxlength="11" type="text" name="userName" class="login-input" placeholder="请输入您的手机">
+                            <i class="remove icon clear-icon"></i>
+                        </div>
+                        <div class="password">
+                            <input type="text" name="password" class="login-input" placeholder="请输入您的密码"
+                                maxlength="16" autocomplete="false" >
+                            <div class="eye-box">
+                                <img src="./images/icon_on.png" >
+                                <!-- <img src="../../assets/images/icon_off.png"> -->
+                            </div>
+                        </div>
+                        <button type="button" class="login-input login-button">登 录</button>
                     </div>
                 </div>
-                <button type="button" class="login-input login-button">登 录</button>
             </form>
         </div>
     </div>
+    <script src="./js/common.js"></script>
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+            boring.tab('login-form');
+        }());
+    </script>
 </body>
 </html>

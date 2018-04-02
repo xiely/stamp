@@ -16,8 +16,6 @@
     flex: 1;
     max-width: 50px;
     min-width: 50px;
-    /* max-height: 60px;
-    min-height: 60px; */
 }
 .top-title{
     flex: 1;
@@ -47,23 +45,17 @@
 .left-wrap {
     width: 510px;
     margin-right: 10%;
+    margin-top: -124px;
 }
 .login-img{
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
 }
 
 .login-wrap {
     width:360px;
-    height:270px; 
+    height:370px; 
     background:rgba(255,255,255,1);
-}
-
-.title {
-    font-size: 18px;
-    color: #216FDA;
-    text-align: center;
-    margin-top: 20px;
 }
 
 .error-tip,
@@ -91,7 +83,7 @@
 }
 
 .remove.clear-icon {
-    background: url(./images/icon_delete.png) no-repeat;
+    background: url(../images/icon_delete.png) no-repeat;
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -153,6 +145,45 @@ input::-webkit-input-placeholder {
 
 input:-webkit-autofill {   
     -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+.login-form-header{
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e8e8e8;
+}
+.login-method-nav{
+    flex: 1;
+    font-size: 18px;
+    text-align: center;
+    color: #898d90;
+    height: 60px;
+    line-height: 60px;
+}
+.login-method-nav.boring-tab-current{
+    color: #38adff;
+    border-bottom: 4px solid #38adff;
+    cursor: default;
+}
+.login-method-content{
+    width:360px;
+    height:370px;
+}
+.login-qrcode-wrap{
+   width: 210px;
+   height: 210px;
+   margin: 20px auto;
+}
+.login-qrcode{
+    width: 210px;
+    height: 210px;
+}
+.qrcode-login-tip{
+    font-size: 14px;
+    text-align: center;
+    color: #898d90;
 }
 
 
