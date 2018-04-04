@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="./css/dialog.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/person-list.css">
+</head>
+<body>
+    <div class="main">
+        <div class="main-top">
+            <div class="logo-wrap">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="" class="logo-img">
+                </div>
+                <div class="title">企业名称</div>
+            </div>
+            <div class="nav-wrap">
+                <a href="./person-list.html " class="nav-item nav-item-active">通讯录</a>
+                <a href="javascript:;" class="nav-item">工作台</a>
+                <a href="javascript:;" class="nav-item">增值服务</a>
+                <a href="javascript:;" class="nav-item">设置</a>
+                <a href="javascript:;" class="nav-item">退出</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="main-content-left">
+                <div class="search-company-wrap">
+                    <input type="text" class="search-company-input" placeholder="请输入部门名称或人员姓名" required id="searchCompany">
+                    <i class="clear" onclick="clearValue()"></i>
+                </div>
+            </div>
+            <div class="main-content-right">
+                <div class="right-top">
+                    <div class="company-name">人工智能科技公司</div>
+                    <div class="seting" id="edit-deparement" onclick="toggleModal('edit-deparement', 'edit-department-box')">设置</div>
+                </div>
+                <div class="content">
+                    <div class="content-title">下级部门</div>
+                    <div class="button-wrap">
+                        <div class="content-button" id="add-departmeant" onclick="toggleModal('add-departmeant','add-department-box')">添加子部门</div>
+                        <div class="content-button">调整顺序</div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-title">部门人员</div>
+                    <div class="button-wrap">
+                        <div class="content-button add-btn" id="add-user" onclick="toggleModal('add-user','add-user-box')">添加</div>
+                        <div class="content-button">批量导入导出</div>
+                        <div class="content-button">团队要求</div>
+                        <div class="content-button">调整顺序</div>
+                        <div class="content-button delete-btn" onclick="onDeletaAllBtnClicked()">批量删除</div>
+                    </div>
+                    <table class="person-list-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div>
+                                        <input type="checkbox" onclick="checkAll(event)">
+                                    </div>
+                                </th>
+                                <th><div>姓名</div></th>
+                                <th><div>职位</div></th>
+                                <th><div>工号</div></th>
+                                <th><div>手机号</div></th>
+                                <th><div>邮箱</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input type="checkbox" class="check-box-item">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>张三</div>
+                                </td>
+                                <td>
+                                    <div>研发总监</div>
+                                </td>
+                                <td>
+                                    <div>1000000</div>
+                                </td>
+                                <td>
+                                    <div>13633333333</div>
+                                </td>
+                                <td>
+                                    <div>795555555@qq.com</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-box" id="add-department-box">
+        <div class="add-department">添加部门</div>
+        <div class="department-message">部门信息</div>
+        <div class="department-message-wrap">
+            <div class="message-item">
+                <div class="message-title"><span class="red-star">*</span>部门名称：</div>
+                <input type="text" class="message-value">
+            </div>
+            <div class="message-item">
+                <div class="message-title"><span class="red-star">*</span>下级部门：</div>
+                <input type="text" class="message-value">
+            </div>
+        </div>
+        <div class="oprts">
+            <button type="button" class="oprt save-btn j-choose-close">保存</button>
+            <button type="button" class="oprt cancel-btn j-choose-close">取消</button>
+        </div>
+    </div>
+    <div class="modal-box" id="add-user-box">
+        <div class="add-user">添加人员</div>
+        <div class="user-message-wrap">
+            <div class="message-item">
+                <div class="message-title"><span class="red-star">*</span>姓名：</div>
+                <input type="text" class="message-value" name="name">
+            </div>
+            <div class="message-item">
+                <div class="message-title"><span class="red-star">*</span>部门：</div>
+                <input type="text" class="message-value" name="department">
+            </div>
+            <div class="message-item">
+                <div class="message-title">职位：</div>
+                <input type="text" class="message-value" name="position">
+            </div>
+            <div class="message-item">
+                <div class="message-title">邮箱：</div>
+                <input type="text" class="message-value" name="mail">
+            </div>
+            <div class="message-item">
+                <div class="message-title"><span class="red-star">*</span>手机号</div>
+                <input type="text" class="message-value" name="phone">
+            </div>
+        </div>
+        <div class="oprts">
+            <button type="button" class="oprt save-btn j-choose-close">保存</button>
+            <button type="button" class="oprt save-btn" onclick="saveContinueBtn()">保存并继续添加</button>
+            <button type="button" class="oprt cancel-btn j-choose-close">取消</button>
+        </div>
+    </div>
+    <div class="modal-box" id="edit-department-box">
+        <div class="add-department">编辑部门</div>
+        <div class="department-message">部门信息</div>
+        <div class="department-message-wrap">
+            <div class="message-item">
+                <div class="message-title"><span class="red-star">*</span>部门名称：</div>
+                <input type="text" class="message-value">
+            </div>
+            <div class="message-item">
+                <div class="message-title">设置管理员：</div>
+                <input type="text" class="message-value">
+            </div>
+        </div>
+        <div class="oprts">
+            <button type="button" class="oprt save-btn j-choose-close">保存</button>
+            <button type="button" class="oprt cancel-btn j-choose-close">取消</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script>
+        function clearValue() {
+            let searchCompanyEle = document.querySelector("#searchCompany");
+            searchCompanyEle.value = "";
+        }
+
+        function saveContinueBtn() {
+            let addUserBoxEle = document.querySelector("#add-user-box");
+            let inputEle = addUserBoxEle.getElementsByTagName("input");
+            for (let ele of inputEle) {
+                ele.value = "";
+            }
+        }
+
+        function checkAll(e) {
+            let checkboxEle = document.querySelectorAll(".check-box-item");
+            if (e.target.checked) {
+                for(let item of checkboxEle) {
+                    item.checked = true;
+                }
+            }
+            else {
+                for(let item of checkboxEle) {
+                    item.checked = false;
+                }
+            }
+        }
+
+
+        function onDeletaAllBtnClicked() {
+            let checkboxEle = document.querySelectorAll(".check-box-item");
+            let i = 0;
+            for (let ele of checkboxEle) {
+                if (ele.checked) {
+                    i++;
+                }
+            }
+            if (i) {
+                let confirmDelete = confirm("是否要删除选中的员工？");
+                if (confirmDelete) {
+                    // 确认删除
+                }
+            }
+            else {
+                alert("请选择要删除的人员。");
+            }
+        }
+
+        function toggleModal(handle, box) {
+            var
+                open = function () {
+                    boring.getClassList(box).add(BOX_OPENED_CLASS);
+                },
+
+                close = function () {
+                    boring.getClassList(box).remove(BOX_OPENED_CLASS);
+                },
+
+                init = function () {
+                    if (Array.from(boring.getClassList(box)).indexOf(BOX_OPENED_CLASS) === -1) {
+                        open();
+                    }
+                    else {
+                        close();
+                    }
+                    listenClose();
+                },
+
+                listenClose = function () {
+                    boring.listen(box, 'click', function (e) {
+                        var e = e || event,
+                            t = e.target || e.srcElement;
+
+                        if (boring.getClassList(t).contains('j-choose-close')) {
+                            close();
+                        }
+                    });
+
+                    boring.listen(document, 'keyup', function (e) {
+                        var e = e || event;
+
+                        if (e.keyCode === 27) {
+                            close();
+                        }
+                    });
+                },
+
+                BOX_OPENED_CLASS = 'modal-box-opened',
+                box = document.getElementById(box);
+            init();
+        }
+    </script>
+</body>
+</html>
