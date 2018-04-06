@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="./css/dialog.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/person-download.css">
+</head>
+<body>
+    <div class="main">
+        <div class="main-top">
+            <div class="logo-wrap">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="" class="logo-img">
+                </div>
+                <div class="title">企业名称</div>
+            </div>
+            <div class="nav-wrap">
+                <a href="./person-list.html " class="nav-item nav-item-active">通讯录</a>
+                <a href="javascript:;" class="nav-item">工作台</a>
+                <a href="javascript:;" class="nav-item">增值服务</a>
+                <a href="javascript:;" class="nav-item">设置</a>
+                <a href="javascript:;" class="nav-item">退出</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="person-download-content">
+                <div class="person-download-nav-top">
+                    <a href="./person-list.html" class="address-link">通讯录</a>
+                    <span>></span>
+                    <span>导入通讯录</span>
+                </div>
+                <div class="person-download-main" id="person-download-main"> 
+                    <div class="tab-nav-wrap boring-tab-handles">
+                        <div class="tab-nav">新建通讯录</div>
+                        <div class="tab-nav">导出/修改通讯录</div>
+                    </div>
+                    <div class="download-content-wrap boring-tab-panels">
+                        <div class="download-content">
+                            <div class="content-item">
+                                <div class="download-process">1</div>
+                                <div class="download-tip">下载员工通讯录模版，批量填写员工信息</div>
+                                <button class="download-btn">下载</button>
+                            </div>
+                            <div class="content-item">
+                                <div class="download-process">2</div>
+                                <div class="download-tip">上传填写好的员工信息表息</div>
+                                <div class="upload-file-wrap">
+                                    <button class="download-btn">选择文件</button>
+                                    <input type="file" class="upload-file" id="upload-file1" onchange="onUploadBtnClicked('1')">
+                                    <span class="upload-file-value" id="upload-file-value1">未上传任何文件</span>
+                                </div>
+                            </div>
+                            <p class="declare">法律声明：企业通讯录导入服务由智鉴开发并经授权企业管理员选择开通、使用、管理，相关数据存储于智鉴专属云存储空间并归属企业所有。智鉴安全技术已通过相关机构认证，请放心使用。</p>
+                            <div class="sure-upload-wrap">
+                                <button class="sure-upload" disabled id="sure-upload1">上传</button>
+                            </div>
+                        </div>
+                        <div class="download-content">
+                            <div class="content-item">
+                                <div class="download-process">1</div>
+                                <div class="download-tip">导出所有员工信息，批量修改员工信息</div>
+                                <button class="download-btn">导出</button>
+                            </div>
+                            <div class="content-item">
+                                <div class="download-process">2</div>
+                                <div class="download-tip">上传修改好的员工信息表</div>
+                                <div class="upload-file-wrap">
+                                    <button class="download-btn">选择文件</button>
+                                    <input type="file" class="upload-file" id="upload-file2" onchange="onUploadBtnClicked('2')">
+                                    <span class="upload-file-value" id="upload-file-value2">未上传任何文件</span>
+                                </div>
+                            </div>
+                            <p class="declare">法律声明：企业通讯录导入服务由智鉴开发并经授权企业管理员选择开通、使用、管理，相关数据存储于智鉴专属云存储空间并归属企业所有。智鉴安全技术已通过相关机构认证，请放心使用。</p>
+                            <div class="sure-upload-wrap">
+                                <button class="sure-upload" disabled id="sure-upload2">上传</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="./js/common.js"></script>
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+            boring.tab('person-download-main');
+        }());
+        (function () {
+            onUploadBtnClicked = (flag) => {
+                console.log(flag);
+                let uploadFileValue = document.querySelector("#upload-file-value" + flag);
+                let uploadFile = document.querySelector("#upload-file" + flag);
+                let suerUpload = document.querySelector("#sure-upload" + flag)
+                uploadFileValue.innerHTML = uploadFile.value;
+                suerUpload.removeAttribute("disabled");
+            }
+        }());
+    </script>
+</body>
+</html>

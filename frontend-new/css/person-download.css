@@ -1,0 +1,127 @@
+.main-content{
+    width: 100%;
+    max-width: 100%;
+}
+.person-download-content{
+    width: 1080px;
+    margin: auto;
+    margin-top: 30px;
+    background: #fff;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    padding: 30px;
+}
+.address-link{
+    color: #0e77ca;
+}
+.address-link:hover{
+    color: #49a9ee;
+}
+.tab-nav-wrap{
+    margin: 20px 0;
+}
+.tab-nav-wrap:after{
+    content: "";
+    display: block;
+    overflow: hidden;
+    height: 0;
+    clear: both;
+}
+.tab-nav{
+    float: left;
+    background: #ffffff;
+    border: 1px solid #dedede;
+    color: #333333;
+    z-index: 999;
+    padding: 10px;
+    margin: 0;
+}
+.tab-nav:nth-child(1){
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.tab-nav:nth-child(2){
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.tab-nav.boring-tab-current{
+    background: #a3b5c2;
+    border: 1px solid #adbfcb;
+    color: #ffffff;
+}
+.download-content-wrap{
+    border: 1px solid #dedede;
+    padding: 10px;
+    border-radius: 4px;
+}
+.download-tip{
+    display: inline-block;
+    margin-right: 10px;
+}
+.download-btn{
+    display: inline-block;
+    padding: 4px 20px;
+    color: #fff;
+    background-color: #38adff;
+    border: 1px solid rgba(0, 140, 238, 0.72);
+    border-radius: 4px;
+}
+.download-process{
+    display: inline-block;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    text-align: center;
+    color: #999;
+}
+.download-btn:hover{
+    color: #fff;
+    border: 1px solid #38adff;
+    background: #5abbff;
+}
+.content-item::after{
+    position: relative;
+    left: 20px;
+    content: "";
+    display: block;
+    height: 20px;
+    border-left: 2px dotted #999;
+}
+.content-item:nth-child(2)::after{
+    display: none;
+}
+.upload-file-wrap{
+    display: inline-block;
+    position: relative;
+}
+.upload-file{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 95px;
+}
+.declare{
+    font-size: 12px;
+    color: #333;
+    margin: 20px 0;
+}
+.sure-upload-wrap{
+    width: 100%;
+    text-align: center;
+}
+.sure-upload{
+    border: 1px solid #38adff;
+    color: #38adff;
+    padding:10px 30px;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.sure-upload:disabled{
+    opacity: .5;
+    cursor: default;
+}

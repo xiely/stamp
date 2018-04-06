@@ -49,8 +49,8 @@
                     <div class="content-title">部门人员</div>
                     <div class="button-wrap">
                         <div class="content-button add-btn" id="add-user" onclick="toggleModal('add-user','add-user-box')">添加</div>
-                        <div class="content-button">批量导入导出</div>
-                        <div class="content-button">团队要求</div>
+                        <a class="content-button" href="./person-download.html">批量导入导出</a>
+                        <a class="content-button" href="./person-invitate.html">团队邀请</a>
                         <div class="content-button">调整顺序</div>
                         <div class="content-button delete-btn" onclick="onDeletaAllBtnClicked()">批量删除</div>
                     </div>
@@ -107,7 +107,7 @@
                 <input type="text" class="message-value">
             </div>
             <div class="message-item">
-                <div class="message-title"><span class="red-star">*</span>下级部门：</div>
+                <div class="message-title"><span class="red-star">*</span>上级部门：</div>
                 <input type="text" class="message-value">
             </div>
         </div>

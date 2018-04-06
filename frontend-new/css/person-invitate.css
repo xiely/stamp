@@ -1,0 +1,73 @@
+.main-content{
+    width: 100%;
+    max-width: 100%;
+}
+.person-invitate-content{
+    width: 1080px;
+    margin: auto;
+    margin-top: 30px;
+    background: #fff;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    padding: 30px;
+}
+.address-link{
+    color: #0e77ca;
+}
+.address-link:hover{
+    color: #49a9ee;
+}
+.invitate-title{
+    margin: 20px 0;
+    padding: 0px 15px;
+    min-height: 38px;
+    background: #eceff4;
+    line-height: 38px;
+}
+.invitate-item{
+    margin: 20px 0;
+}
+.link-uri{
+    display: inline-block;
+    color: #38adff;
+    padding: 0px 5px;
+}
+.invitate-tip{
+    font-size: 14px;
+    padding-left: 20px;
+    color: #8f8f8f
+}
+.copy-uri{
+    float: right;
+    padding: 4px 10px;
+    color: #fff;
+    background-color: #38adff;
+    border: 1px solid rgba(0, 140, 238, 0.72);
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.copy-uri:hover{
+    color: #fff;
+    border: 1px solid #38adff;
+    background: #5abbff;
+}
+.invitate-code{
+    width: 123px;
+    height: 123px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.invitate-table{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+.invitate-table tr{
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #ebebeb;
+}
+.invitate-table tbody tr:hover {
+    background: #f7f7f7
+}

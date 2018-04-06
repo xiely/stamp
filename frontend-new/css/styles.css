@@ -42,6 +42,7 @@ select,
 button,
 option {
     font-family: "微软雅黑", Helvetica, sans-serif;
+    outline: none;
 }
 
 img {
