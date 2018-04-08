@@ -25,16 +25,10 @@
                         错误提示
                 </div> -->
                 <div class="login-form-header boring-tab-handles">
-                    <div class="login-method-nav">扫描登录</div>
                     <div class="login-method-nav">用户名密码登录</div>
+                    <div class="login-method-nav">扫描登录</div>
                 </div>
                 <div class="boring-tab-panels">
-                    <div class="login-method-content">
-                        <div class="login-qrcode-wrap">
-                            <img src="../images/06.png" alt="二维码" class="login-qrcode">
-                        </div>
-                        <p class="qrcode-login-tip">请扫码登录</p>
-                    </div>
                     <div class="login-method-content">
                         <div class="user-name">
                             <input maxlength="11" type="text" name="userName" class="login-input" placeholder="请输入您的手机">
@@ -50,6 +44,13 @@
                         </div>
                         <button type="button" class="login-input login-button" onclick="showLoginModal()">登 录</button>
                     </div>
+                    <div class="login-method-content">
+                        <div class="login-qrcode-wrap">
+                            <img src="../images/06.png" alt="二维码" class="login-qrcode">
+                        </div>
+                        <p class="qrcode-login-tip">请扫码登录</p>
+                    </div>
+
                 </div>
             </form>
             <div class="dialog boring-dialog notice-dialog" id="notice-dialog">
