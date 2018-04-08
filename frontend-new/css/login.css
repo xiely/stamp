@@ -187,5 +187,8 @@ input:-webkit-autofill {
     text-align: center;
     color: #898d90;
 }
+.notice-dialog{
+    background: #fff;
+}
 
 

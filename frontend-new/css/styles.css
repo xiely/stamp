@@ -115,3 +115,45 @@ img {
     border-bottom-right-radius: 4px;
     width: 600px;
 }
+.boring-dialog{
+    background: #fff;
+    padding: 10px;
+}
+.oprts{
+    width:100%;
+    text-align: center;
+}
+.oprt{
+    display: inline-block;
+    padding: 5px 12px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid #c3c6ce;
+    background: #ffffff;
+    border-radius: 4px;
+    min-width: 80px;
+    color: #414141;
+}
+.save-btn{
+    color: #fff;
+    background-color: #38adff;
+    border-color: rgba(0, 140, 238, 0.72);
+    margin-right: 10px;
+}
+.save-btn:hover{
+    border: 1px solid #38adff;
+    background: #5abbff;
+}
+.cancel-btn{
+    outline: none;
+}
+.cancel-btn:hover{
+    border: 1px solid #a4a8b1;
+    background: #fff;
+    color: #767676;
+}

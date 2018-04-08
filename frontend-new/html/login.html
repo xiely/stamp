@@ -48,10 +48,23 @@
                                 <!-- <img src="../../assets/images/icon_off.png"> -->
                             </div>
                         </div>
-                        <button type="button" class="login-input login-button">登 录</button>
+                        <button type="button" class="login-input login-button" onclick="showLoginModal()">登 录</button>
                     </div>
                 </div>
             </form>
+            <div class="dialog boring-dialog notice-dialog" id="notice-dialog">
+                <div class="notice">
+                    <h2 class="notice-title">提示</h2>
+                    <p>确认保存所填信息？</p>
+                    <p>确认保存所填信息？</p>
+                    <p>确认保存所填信息？</p>
+                    <p>确认保存所填信息？</p>
+                </div>
+                <div class="oprts">
+                    <button type="button" class="oprt save-btn boring-dialog-closer">确定</button>
+                    <button type="button" class="oprt cancel-btn boring-dialog-closer">取消</button>
+                </div>
+            </div>
         </div>
     </div>
     <script src="../js/common.js"></script>
@@ -60,6 +73,11 @@
             'use strict';
             boring.tab('login-form');
         }());
+
+        function showLoginModal() {
+            boring.dialog('notice-dialog').open();
+        }
+        
     </script>
 </body>
 </html>
