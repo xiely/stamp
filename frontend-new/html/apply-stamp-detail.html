@@ -33,7 +33,7 @@
                     <div class="top-title">申请用章详情</div>
                 </div>
                 <div class="apply-stamp-detail-main" id="apply-stamp-detail">
-                    <div class="apply-stamp-nav  boring-tab-handles">
+                    <div class="apply-stamp-nav boring-tab-handles">
                         <div class="apply-stamp-nav-item">部门</div>
                         <div class="apply-stamp-nav-item">印章类型</div>
                         <div class="apply-stamp-nav-item">印章名称</div>
@@ -48,7 +48,22 @@
                             <div class="history-item">行政部</div>
                             <div class="history-item">后勤部</div>
                             <div class="history-item">人力资源部</div>
+                            <div id="apply-stamp-select" class="apply-stamp-select">
+                                <select name="" id="" class="department-selects">
+                                    <option value="">请选择</option>
+                                    <option value="人力资源部1">人力资源部1</option>
+                                    <option value="人力资源部2">人力资源部2</option>
+                                    <option value="人力资源部3">人力资源部3</option>
+                                    <option value="人力资源部4">人力资源部4</option>
+                                    <option value="人力资源部5">人力资源部5</option>
+                                </select>
+                            </div>
+                            <div class="oprts">
+                                <button type="button" class="oprt save-btn">保存</button>
+                                <button type="button" class="oprt cancel-btn">取消</button>
+                            </div>
                         </div>
+
                         <div class="apply-stamp-item">bb</div>
                     </div>
                 </div>
@@ -60,6 +75,9 @@
         (function() {
             boring.tab("apply-stamp-detail")
         }())
+        window.onload = function() {
+            console.log("bafafa");
+        }
     </script>
 </body>
 </html>
