@@ -97,6 +97,7 @@ img {
     background: #dedede;
     margin: auto;
     display: flex;
+    min-height: calc( 100vh - 142px);
 }
 .main-content-left{
     flex: 1;

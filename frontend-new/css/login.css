@@ -34,8 +34,10 @@
 
 .bg-wrap {
     flex: 1;
-    width: 100%;
-    background: #216FDA;
+    /* width: 100%;
+    height: 100%; */
+    background: url(../images/banner01.jpg) no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +68,7 @@
     border: 1px solid #216FDA;
     font-size: 12px;
     color: #333;
-    background: url(./images/icon_tip.png) no-repeat 10px center;
+    background: url(../images/icon_tip.png) no-repeat 10px center;
     padding-left: 32px;
     line-height: 28px;
     margin: 0 auto;
