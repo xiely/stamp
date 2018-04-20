@@ -67,7 +67,7 @@
 }
 .department-selects{
     border: 1px solid #ccc;
-    padding: 4px 10px;
+    padding:  10px;
     border-radius: 4px;
 }
 .department-selects option{
@@ -113,4 +113,60 @@
     border: 1px solid #a4a8b1;
     background: #fff;
     color: #767676;
+}
+.item-textarea{
+    width: 100%;
+    height: 80px;
+    margin-bottom: 30px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.user-stamp-number{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 60px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.verify-or-copy{
+    margin-bottom: 60px;
+}
+
+.verify-or-copy-selects{
+    border: 1px solid #ccc;
+    padding: 10px 30px;
+    border-radius: 4px;
+    background: url(../images/icon_view.png) 10px center no-repeat;
+
+}
+.verify-or-copy-selects option{
+    font-size: 14px;
+    line-height: 1.5;
+}
+.add-file-wrap{
+    position: relative;
+    margin-bottom: 10px;
+}
+.add-file-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #38adff;
+    border: 1px solid rgba(0, 140, 238, 0.72);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.add-file-input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 95px;
+    height: 39px;
+    opacity: 0;
+}
+.add-file-tip{
+    margin-bottom: 30px;
 }

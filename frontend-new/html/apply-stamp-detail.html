@@ -43,12 +43,13 @@
                         <div class="apply-stamp-nav-item">备注</div>
                     </div>
                     <div class="apply-stamp-items boring-tab-panels">
+
                         <div class="apply-stamp-item">
                             <div class="item-title">历史选择(常用)</div>
                             <div class="history-item">行政部</div>
                             <div class="history-item">后勤部</div>
                             <div class="history-item">人力资源部</div>
-                            <div id="apply-stamp-select" class="apply-stamp-select">
+                            <div id="choose-department" class="apply-stamp-select">
                                 <select name="" id="" class="department-selects">
                                     <option value="">请选择</option>
                                     <option value="人力资源部1">人力资源部1</option>
@@ -64,8 +65,108 @@
                             </div>
                         </div>
 
-                        <div class="apply-stamp-item">bb</div>
+                        <div class="apply-stamp-item">
+                            <div class="item-title">历史选择(常用)</div>
+                            <div class="history-item">公章</div>
+                            <div class="history-item">法人章</div>
+                            <div id="choose-stamp-type" class="apply-stamp-select">
+                                <select name="" id="" class="department-selects">
+                                    <option value="">请选择</option>
+                                    <option value="公章">公章</option>
+                                    <option value="法人章1">法人章1</option>
+                                    <option value="法人章2">法人章2</option>
+                                    <option value="法人章3">法人章3</option>
+                                    <option value="法人章4">法人章4</option>
+                                </select>
+                            </div>
+                            <div class="oprts">
+                                <button type="button" class="oprt save-btn">保存</button>
+                                <button type="button" class="oprt cancel-btn">取消</button>
+                            </div>
+                        </div>
+
+                        <div class="apply-stamp-item">
+                            <div class="item-title">历史选择(常用)</div>
+                            <div class="history-item">人工智能科技公章1</div>
+                            <div class="history-item">人工智能科技公章2</div>
+                            <div id="choose-stamp-name" class="apply-stamp-select">
+                                <select name="" id="" class="department-selects">
+                                    <option value="">请选择</option>
+                                    <option value="人工智能科技公章1">人工智能科技公章1</option>
+                                    <option value="人工智能科技公章2">人工智能科技公章2</option>
+                                    <option value="人工智能科技公章3">人工智能科技公章3</option>
+                                    <option value="人工智能科技公章4">人工智能科技公章4</option>
+                                    <option value="人工智能科技公章5">人工智能科技公章5</option>
+                                </select>
+                            </div>
+                            <div class="oprts">
+                                <button type="button" class="oprt save-btn">保存</button>
+                                <button type="button" class="oprt cancel-btn">取消</button>
+                            </div>
+                        </div>
+
+                        <div class="apply-stamp-item">
+                            <div class="item-title">用章原因</div>
+                            <textarea class="item-textarea" placeholder="请输入用章原因"></textarea>
+                            <div class="item-title">用章次数</div>
+                            <input type="number" placeholder="请输入用章次数" min="1" value="1" class="user-stamp-number">
+                            <div class="oprts">
+                                <button type="button" class="oprt save-btn">保存</button>
+                                <button type="button" class="oprt cancel-btn">取消</button>
+                            </div>
+                        </div>
+
+                        <div class="apply-stamp-item">
+                            <div id="verify-people" class="verify-or-copy">
+                                <select name="" id="" class="verify-or-copy-selects">
+                                    <option value="">审批人</option>
+                                    <option value="张鑫旭1">张鑫旭1</option>
+                                    <option value="张鑫旭2">张鑫旭2</option>
+                                    <option value="张鑫旭3">张鑫旭3</option>
+                                    <option value="张鑫旭4">张鑫旭4</option>
+                                    <option value="张鑫旭5">张鑫旭5</option>
+                                </select>
+                            </div>
+                            <div id="copy-people" class="verify-or-copy">
+                                <select name="" id="" class="verify-or-copy-selects">
+                                    <option value="">抄送人</option>
+                                    <option value="阮一峰1">阮一峰1</option>
+                                    <option value="阮一峰2">阮一峰2</option>
+                                    <option value="阮一峰3">阮一峰3</option>
+                                    <option value="阮一峰4">阮一峰4</option>
+                                    <option value="阮一峰5">阮一峰5</option>
+                                </select>
+                            </div>
+                            <div class="oprts">
+                                <button type="button" class="oprt save-btn">保存</button>
+                                <button type="button" class="oprt cancel-btn">取消</button>
+                            </div>
+                        </div>
+
+                        <div class="apply-stamp-item">
+                            <div class="add-file-wrap">
+                                <button type="button" class="add-file-btn">添加附件</button>
+                                <input type="file" class="add-file-input">
+                            </div>
+                            <div class="add-file-tip">
+                                <div>可添加附件类型为：</div>
+                                <p>1.pdf<br/>2.txt<br/>3.doc<br/>4.docx<br/></p>
+                            </div>
+                            <div class="oprts">
+                                <button type="button" class="oprt save-btn">保存</button>
+                                <button type="button" class="oprt cancel-btn">取消</button>
+                            </div>
+                        </div>
+
+                        <div class="apply-stamp-item">
+                            <textarea placeholder="请输入备注信息" class="item-textarea"></textarea>
+                            <div class="oprts">
+                                <button type="button" class="oprt save-btn">保存</button>
+                                <button type="button" class="oprt cancel-btn">取消</button>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -75,9 +176,9 @@
         (function() {
             boring.tab("apply-stamp-detail")
         }())
-        window.onload = function() {
-            console.log("bafafa");
-        }
+        document.addEventListener("click", function() {
+            console.log(document.querySelector(".user-stamp-number").value);
+        })
     </script>
 </body>
 </html>
