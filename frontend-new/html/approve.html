@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../css/dialog.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/apply-stamp-detail.css">
+</head>
+<body>
+    <div class="main">
+        <div class="main-content">
+            <div class="apply-stamp-detail-content">
+                <div class="apply-stamp-detail-content-top">
+                    <a href="./worktable.html" class="back"><span class="back-icon"><</span>返回</a>
+                    <div class="top-title">审批用章详情</div>
+                </div>
+                <div class="approve-wrap apply-stamp-detail-main" id="approve-detail">
+                    <div class="approve-tab boring-tab-handles">
+                        <div class="approve-tab-item">待审批</div>
+                        <div class="approve-tab-item">已审批</div>
+                    </div>
+                    <div class="boring-tab-panels">
+                        <div>
+                            <table class="progress-table">
+                                <thead>
+                                    <th>序号</th>
+                                    <th>部门名称</th>
+                                    <th>申请人名称</th>
+                                    <th>申请时间</th>
+                                    <th>申请用途</th>
+                                    <th colspan="2">操作</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>销售部</td>
+                                        <td>张灿灿</td>
+                                        <td>2018.4.3</td>
+                                        <td>用于签订协议</td>
+                                        <td class="approve-btn pass">通过</td>
+                                        <td class="approve-btn refuse">拒绝</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>销售部</td>
+                                        <td>张灿灿</td>
+                                        <td>2018.4.3</td>
+                                        <td>用于签订协议</td>
+                                        <td class="approve-btn pass">通过</td>
+                                        <td class="approve-btn refuse">拒绝</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="turnpage fn-clear">
+                                <div class="pull-right">
+                                    <span class="turnpage-group">
+                                        <a href="javascript:;">首页</a>
+                                        <span>/</span>
+                                        <a href="javascript:;">尾页</a>
+                                    </span>
+                                    <span class="turnpage-group">第 1 / 4 页</span>
+                                    <span class="turnpage-group">
+                                        <a href="javascript:;">上一页</a>
+                                    </span>
+                                    <span class="turnpage-group">
+                                        <a href="javascript:;">下一页</a>
+                                    </span>
+                                    <span class="turnpage-group">
+                                        跳至
+                                        <input type="number" min="1" class="turnpage-control" />
+                                        页
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <table class="progress-table">
+                                <thead>
+                                    <th>序号</th>
+                                    <th>部门名称</th>
+                                    <th>申请人名称</th>
+                                    <th>申请时间</th>
+                                    <th>申请用途</th>
+                                    <th>状态</th>
+                                    <th>详情</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>销售部</td>
+                                        <td>张灿灿</td>
+                                        <td>2018.4.3</td>
+                                        <td>用于签订协议</td>
+                                        <td>已通过</td>
+                                        <td class="view-detail">查看详情</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>销售部</td>
+                                        <td>张灿灿</td>
+                                        <td>2018.4.3</td>
+                                        <td>用于签订协议</td>
+                                        <td>已拒绝</td>
+                                        <td class="view-detail">查看详情</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="turnpage fn-clear">
+                                <div class="pull-right">
+                                    <span class="turnpage-group">
+                                        <a href="javascript:;">首页</a>
+                                        <span>/</span>
+                                        <a href="javascript:;">尾页</a>
+                                    </span>
+                                    <span class="turnpage-group">第 1 / 4 页</span>
+                                    <span class="turnpage-group">
+                                        <a href="javascript:;">上一页</a>
+                                    </span>
+                                    <span class="turnpage-group">
+                                        <a href="javascript:;">下一页</a>
+                                    </span>
+                                    <span class="turnpage-group">
+                                        跳至
+                                        <input type="number" min="1" class="turnpage-control" />
+                                        页
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script type="text/javascript">
+        (function() {
+            boring.tab("approve-detail")
+        }())
+    </script>
+</body>
+</html>

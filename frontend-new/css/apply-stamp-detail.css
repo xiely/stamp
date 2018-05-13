@@ -1,6 +1,7 @@
 .main-content{
     width: 100%;
     max-width: 100%;
+    height: 100vh;
 }
 .apply-stamp-detail-content{
     width: 100%;
@@ -169,4 +170,100 @@
 }
 .add-file-tip{
     margin-bottom: 30px;
+}
+.choose-label-wrap{
+    display: flex;
+    width: 80%;
+    margin: 20px 0;
+}
+.choose-label{
+    flex: 1;
+}
+.ui-input{
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+}
+.progress-table{
+    width: 100%;
+    margin-top: 50px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-collapse: collapse;
+}
+.progress-table td,
+.progress-table th{
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 4px 10px;
+}
+.progress-table td:nth-last-of-type(1),
+.progress-table th:nth-last-of-type(1){
+    border-right: 0px solid #ccc;
+}
+.progress-table tr:nth-last-child(1) td{
+    border-bottom: 0px solid #ccc;
+}
+.turnpage {
+	line-height: 30px;
+	padding: 0 32px;
+	background: #748890;
+	color: #fff;
+}
+.turnpage a {
+	color: inherit;
+}
+.turnpage .mock-checkbox {
+	border-color: #fff;
+}
+.turnpage-group {
+	margin-left: 1em;
+}
+.turnpage-control {
+    width: 3.34em;
+    height: 1.5em;
+	text-align: center;
+	border: 1px solid;
+	border-radius: 4px;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+}
+.approve-wrap{
+    flex-direction: column;
+    margin-top: 30px;
+}
+.approve-tab{
+    display: flex;
+    width: 100%;
+}
+.approve-tab-item{
+    flex: 1;
+    padding-bottom: 20px;
+    margin-right: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+.approve-tab-item.boring-tab-current{
+    color: #38adff;
+    border-color: #38adff;
+}
+.approve-detail{
+    margin-top: 20px;
+}
+.approve-btn{
+    cursor: pointer;
+}
+.pass{
+    color: rgb(74, 235, 74);
+}
+.refuse{
+    color: rgb(243, 53, 53);
+}
+.view-detail{
+    cursor: pointer;
+    color: rgb(60, 214, 235);
 }
