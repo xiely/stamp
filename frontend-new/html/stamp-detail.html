@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../css/dialog.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/apply-stamp-detail.css">
+</head>
+<body>
+    <div class="main">
+        <div class="main-content">
+            <div class="apply-stamp-detail-content">
+                <div class="apply-stamp-detail-content-top">
+                    <a href="./worktable.html" class="back"><span class="back-icon"><</span>返回</a>
+                    <div class="top-title">印章详情</div>
+                </div>
+                                <div class="approve-wrap apply-stamp-detail-main" id="approve-detail">
+                    <div class="approve-tab boring-tab-handles">
+                        <div class="approve-tab-item">印章列表</div>
+                        <div class="approve-tab-item">抄送我的</div>
+                    </div>
+                    <div class="boring-tab-panels">
+                        <div>
+                            <div class="delete-in-batches">批量删除</div>
+                            <table class="progress-table stamp-detail-table">
+                                <thead>
+                                    <th>
+                                        <input type="checkbox">
+                                    </th>
+                                    <th>印章名称</th>
+                                    <th>管理员</th>
+                                    <th>抄送人</th>
+                                    <th colspan="4">操作</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>公章</td>
+                                        <td>张灿灿</td>
+                                        <td>张大山</td>
+                                        <td class="edit-stamp-btn">维护</td>
+                                        <td class="edit-stamp-btn">初始化</td>
+                                        <td class="edit-stamp-btn">删除</td>
+                                        <td class="edit-stamp-btn" onclick="toggleModal('edit-stamp-box')">设置</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>公章</td>
+                                        <td>张灿灿</td>
+                                        <td>张大山</td>
+                                        <td class="edit-stamp-btn">维护</td>
+                                        <td class="edit-stamp-btn">初始化</td>
+                                        <td class="edit-stamp-btn">删除</td>
+                                        <td class="edit-stamp-btn" onclick="toggleModal('edit-stamp-box')">设置</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="turnpage fn-clear">
+                                <div class="pull-right">
+                                    <span class="turnpage-group">
+                                        <a href="javascript:;">首页</a>
+                                        <span>/</span>
+                                        <a href="javascript:;">尾页</a>
+                                    </span>
+                                    <span class="turnpage-group">第 1 / 4 页</span>
+                                    <span class="turnpage-group">
+                                        <a href="javascript:;">上一页</a>
+                                    </span>
+                                    <span class="turnpage-group">
+                                        <a href="javascript:;">下一页</a>
+                                    </span>
+                                    <span class="turnpage-group">
+                                        跳至
+                                        <input type="number" min="1" class="turnpage-control" />
+                                        页
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <table class="progress-table">
+                                <thead>
+                                    <th>序号</th>
+                                    <th>印章名称</th>
+                                    <th>用章原因</th>
+                                    <th>申请用章人</th>
+                                    <th>用章状态</th>
+                                    <th>时间</th>
+                                    <th>审批人</th>
+                                    <th>详情</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>公章</td>
+                                        <td>用于签订协议</td>
+                                        <td>张灿灿</td>
+                                        <td>进行中</td>
+                                        <td>2018-3-21</td>
+                                        <td>李吴</td>
+                                        <td class="view-detail" onclick="toggleModal('person-detail-box')">
+                                            查看详情
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>公章</td>
+                                        <td>用于签订协议</td>
+                                        <td>张灿灿</td>
+                                        <td>进行中</td>
+                                        <td>2018-3-21</td>
+                                        <td>李吴</td>
+                                        <td class="view-detail" onclick="toggleModal('person-detail-box')">
+                                                查看详情
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="turnpage fn-clear">
+                                <div class="pull-right">
+                                    <span class="turnpage-group">
+                                        <a href="javascript:;">首页</a>
+                                        <span>/</span>
+                                        <a href="javascript:;">尾页</a>
+                                    </span>
+                                    <span class="turnpage-group">第 1 / 4 页</span>
+                                    <span class="turnpage-group">
+                                        <a href="javascript:;">上一页</a>
+                                    </span>
+                                    <span class="turnpage-group">
+                                        <a href="javascript:;">下一页</a>
+                                    </span>
+                                    <span class="turnpage-group">
+                                        跳至
+                                        <input type="number" min="1" class="turnpage-control" />
+                                        页
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-box" id="edit-stamp-box">
+        <div class="add-department">编辑印章</div>
+        <div class="department-message-wrap">
+            <div class="message-item">
+                <div class="message-title"><span class="red-star">*</span>印章名称：</div>
+                <input type="text" class="message-value">
+            </div>
+            <div class="message-item">
+                <div class="message-title"><span class="red-star">*</span>印章类型：</div>
+                <select class="message-value">
+                    <option value="">公章</option>
+                    <option value="">公章1</option>
+                    <option value="">公章2</option>
+                </select>
+            </div>
+            <div class="message-item">
+                <div class="message-title"><span class="red-star">*</span>主管理员：</div>
+                <input type="text" class="message-value">
+            </div>
+            <div class="message-item">
+                <div class="message-title"><span class="red-star">*</span>管理员：</div>
+                <input type="text" class="message-value">
+            </div>
+            <div class="message-item">
+                <div class="message-title"><span class="red-star"></span>印章备注：</div>
+                <input type="text" class="message-value">
+            </div>
+        </div>
+        <div class="oprts">
+            <button type="button" class="oprt save-btn j-choose-close">保存</button>
+            <button type="button" class="oprt cancel-btn j-choose-close">取消</button>
+        </div>
+    </div>
+    <div class="modal-box" id="person-detail-box">
+        <div class="add-department">抄送详情</div>
+        <div class="approve-detail person-detail-wrap">
+            <div class="user-wrap">
+                <img src="../images/01.png" alt="图像" class="user-img">
+                <div class="user-name">张小飞</div>
+            </div>
+            <div class="apply-item">
+                <div class="item-name">申请时间：</div>
+                <div class="item-value">2018.3.27&nbsp;09:12:11</div>
+            </div>
+            <div class="apply-item">
+                <div class="item-name">申请印章：</div>
+                <div class="item-value">公章</div>
+            </div>
+            <div class="apply-item">
+                <div class="item-name">印章备注：</div>
+                <div class="item-value">公章</div>
+            </div>
+            <div class="apply-item">
+                <div class="item-name">申请原因：</div>
+                <div class="item-value">测试</div>
+            </div>
+            <div class="apply-item">
+                <div class="item-name">申请用章次数：</div>
+                <div class="item-value">1</div>
+            </div>
+            <div class="apply-item">
+                <div class="item-name">用章回传次数：</div>
+                <div class="item-value">1</div>
+            </div>
+            <div class="approve-people-wrap">
+                <div class="approve-title">上级审批</div>
+                <img src="../images/01.png" alt="图像" class="user-img">
+                <div class="user-name"><span>审批人：</span>张大飞</div>
+            </div>
+            <div class="apply-item">
+                <div class="item-name">审批状态：</div>
+                <div class="item-value">同意</div>
+                <div>理由</div>
+            </div>
+            <div class="apply-item">
+                <div class="item-name">审批时间：</div>
+                <div class="item-value">2018.4.27&nbsp;09:12:11</div>
+            </div>
+        </div>
+        <div class="oprts">
+            <button type="button" class="oprt save-btn j-choose-close">关闭</button>
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script type="text/javascript">
+        (function() {
+            boring.tab("approve-detail")
+        }());
+        function toggleModal(box) {
+            console.log("bbb");
+            var
+                open = function () {
+                    boring.getClassList(box).add(BOX_OPENED_CLASS);
+                },
+
+                close = function () {
+                    boring.getClassList(box).remove(BOX_OPENED_CLASS);
+                },
+
+                init = function () {
+                    if (Array.from(boring.getClassList(box)).indexOf(BOX_OPENED_CLASS) === -1) {
+                        open();
+                    }
+                    else {
+                        close();
+                    }
+                    listenClose();
+                },
+
+                listenClose = function () {
+                    boring.listen(box, 'click', function (e) {
+                        var e = e || event,
+                            t = e.target || e.srcElement;
+
+                        if (boring.getClassList(t).contains('j-choose-close')) {
+                            close();
+                        }
+                    });
+
+                    boring.listen(document, 'keyup', function (e) {
+                        var e = e || event;
+
+                        if (e.keyCode === 27) {
+                            close();
+                        }
+                    });
+                },
+
+                BOX_OPENED_CLASS = 'modal-box-opened',
+                box = document.getElementById(box);
+            init();
+        }
+    </script>
+</body>
+</html>
