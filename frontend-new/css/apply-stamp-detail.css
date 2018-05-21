@@ -254,9 +254,6 @@
 .approve-detail{
     margin-top: 20px;
 }
-.approve-btn{
-    cursor: pointer;
-}
 .pass{
     color: rgb(74, 235, 74);
 }
@@ -266,4 +263,63 @@
 .view-detail{
     cursor: pointer;
     color: rgb(60, 214, 235);
+}
+.approve-detail{
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+.user-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.user-name{
+    display: inline-block;
+    vertical-align: middle;
+}
+.apply-item{
+    margin-top: 10px;
+}
+.item-name{
+    display: inline-block;
+}
+.item-value{
+    display: inline-block;
+}
+.approve-people-wrap{
+    margin-top: 30px;
+}
+.approve-btn-wrap{
+    display: flex;
+    flex-direction: row;
+}
+.approve-btn{
+    flex: 1;
+    width: 100px;
+    height: 40px;
+    margin-right: 40px;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    color: #333;
+}
+.notice-title{
+    font-size: 24px;
+    text-align: center;
+}
+.reason{
+    margin: 20px;
+    padding: 4px 10px;
+    border: 1px solid #cccc;
+    border-radius: 4px;
+}
+.oprts{
+    margin-bottom: 20px;
+}
+.choose-deliver-table{
+    margin-bottom: 30px;
 }

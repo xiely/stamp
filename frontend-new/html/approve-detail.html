@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../css/dialog.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/apply-stamp-detail.css">
+</head>
+<body>
+    <div class="main">
+        <div class="main-content">
+            <div class="apply-stamp-detail-content">
+                <div class="apply-stamp-detail-content-top">
+                    <a href="./approve.html" class="back"><span class="back-icon"><</span>返回</a>
+                    <div class="top-title">审批详情</div>
+                </div>
+                <div class="approve-detail">
+                    <div class="user-wrap">
+                        <img src="../images/01.png" alt="图像" class="user-img">
+                        <div class="user-name">张小飞</div>
+                    </div>
+                    <div class="apply-item">
+                        <div class="item-name">申请时间：</div>
+                        <div class="item-value">2018.4.3</div>
+                    </div>
+                    <div class="apply-item">
+                        <div class="item-name">申请印章：</div>
+                        <div class="item-value">公章</div>
+                    </div>
+                    <div class="apply-item">
+                        <div class="item-name">印章备注：</div>
+                        <div class="item-value">公章</div>
+                    </div>
+                    <div class="apply-item">
+                        <div class="item-name">申请原因：</div>
+                        <div class="item-value">测试</div>
+                    </div>
+                    <div class="apply-item">
+                        <div class="item-name">申请用章次数：</div>
+                        <div class="item-value">1</div>
+                    </div>
+                    <div class="apply-item">
+                        <div class="item-name">用章回传次数：</div>
+                        <div class="item-value">1</div>
+                    </div>
+                    <div class="approve-people-wrap">
+                        <div class="approve-title">上级审批</div>
+                        <img src="../images/01.png" alt="图像" class="user-img">
+                        <div class="user-name"><span>审批人：</span>张大飞</div>
+                    </div>
+                    <div class="apply-item">
+                        <div class="item-name">审批状态：</div>
+                        <div class="item-value">待审批</div>
+                    </div>
+                    <div class="apply-item approve-btn-wrap">
+                       <div class="approve-btn" onclick="showLoginModal()">同意</div>
+                       <div class="approve-btn" onclick="showLoginModal()">拒绝</div>
+                       <a class="approve-btn" href="./deliver-to-someone.html">转交</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dialog boring-dialog notice-dialog" id="confirm-dialog">
+            <div class="notice">
+                <h2 class="notice-title">提示</h2>
+                <textarea cols="30" rows="10" class="reason" placeholder="理由"></textarea>
+            </div>
+            <div class="oprts">
+                <button type="button" class="oprt save-btn boring-dialog-closer">确定</button>
+                <button type="button" class="oprt cancel-btn boring-dialog-closer">取消</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script type="text/javascript">
+
+        function showLoginModal() {
+            boring.dialog('confirm-dialog').open();
+        }
+    </script>
+</body>
+</html>
