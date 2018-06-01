@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../css/dialog.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/apply-stamp-detail.css">
+</head>
+<body>
+    <div class="main">
+        <div class="main-content">
+            <div class="apply-stamp-detail-content">
+                <div class="apply-stamp-detail-content-top">
+                    <a href="./approve.html" class="back"><span class="back-icon"><</span>返回</a>
+                    <div class="top-title">用章记录</div>
+                </div>
+                <div class="apply-progress use-stamp-record">
+                    <div class="apply-progresso-top">
+                        <div class="choose-label-wrap">
+                            <label class="choose-label-filter">筛选：</label>
+                            <label class="choose-label choose-date-label" for="date">
+                                <input name="item" type="radio" id="date" value="date" onclick="onFilterBtnClicked(this)">按日期查找
+                            </label>
+                            <label class="choose-label" for="person">
+                                <input name="item" type="radio" id="person" value="person" onclick="onFilterBtnClicked(this)">按相关人员查找
+                            </label>
+                            <label class="choose-label" for="time">
+                                <input name="item" type="radio" id="time" value="time" onclick="onFilterBtnClicked(this)">按顺序查找
+                            </label>
+                        </div>
+                        <div class="choose-label-wrap">
+                            <div class="choose-label-filter"></div>
+                            <div class="choose-date" id="choose-date">
+                                <input type="text" class="ui-input use-stamp-recore-date" id="start-time" />
+                                <span>--</span>
+                                <input type="text" class="ui-input use-stamp-recore-date" id="end-time" />
+                            </div>
+                            <div class="choose-person" id="choose-person">
+                                <input type="text" class="ui-input" placeholder="请输入您想查找的用户名称">
+                            </div>
+                            <div class="choose-time" id="choose-time">
+                                <button class="time-button">时间正序</button>
+                                <button class="time-button">时间倒序</button>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="progress-table">
+                        <thead>
+                            <th>序号</th>
+                            <th>部门名称</th>
+                            <th>申请人名称</th>
+                            <th>申请时间</th>
+                            <th>进度</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>销售部</td>
+                                <td>张灿灿</td>
+                                <td>2018.4.3</td>
+                                <td>进行中</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>销售部</td>
+                                <td>张灿灿</td>
+                                <td>2018.4.3</td>
+                                <td>进行中</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="turnpage fn-clear">
+                        <div class="pull-right">
+                            <span class="turnpage-group">
+                                <a href="javascript:;">首页</a>
+                                <span>/</span>
+                                <a href="javascript:;">尾页</a>
+                            </span>
+                            <span class="turnpage-group">第 1 / 4 页</span>
+                            <span class="turnpage-group">
+                                <a href="javascript:;">上一页</a>
+                            </span>
+                            <span class="turnpage-group">
+                                <a href="javascript:;">下一页</a>
+                            </span>
+                            <span class="turnpage-group">
+                                跳至
+                                <input type="number" min="1" class="turnpage-control" />
+                                页
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../laydate/laydate.js"></script>
+    <script src="../js/common.js"></script>
+    <script>
+        	(function () {
+                laydate({
+                    elem: '#start-time',
+                    event: 'focus',
+                    istime: true,
+                    format: 'YYYY-MM-DD'
+                });
+            }());
+            (function () {
+                laydate({
+                    elem: '#end-time',
+                    event: 'focus',
+                    istime: true,
+                    format: 'YYYY-MM-DD'
+                });
+            }());
+            function onFilterBtnClicked(e) {
+                const chooseDateEle = document.querySelector("#choose-date");
+                const choosePersonEle = document.querySelector("#choose-person");
+                const chooseTimeEle = document.querySelector("#choose-time");
+                chooseDateEle.style.opacity = "0";
+                choosePersonEle.style.opacity = "0";
+                chooseTimeEle.style.opacity = "0";
+                if (e.value === "date") {
+                    chooseDateEle.style.opacity = "1";
+                }
+                if (e.value === "person") {
+                    choosePersonEle.style.opacity = "1";
+                }
+                if (e.value === "time") {
+                    chooseTimeEle.style.opacity = "1";
+                }
+            }
+    </script>
+</body>
+</html>

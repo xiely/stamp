@@ -176,6 +176,9 @@
     width: 80%;
     margin: 20px 0;
 }
+.use-stamp-record .choose-label-wrap{
+    width: 100%;
+}
 .choose-label{
     flex: 1;
 }
@@ -440,7 +443,7 @@
     margin-top: 0;
 }
 .delete-in-batches{
-   float: right;
+    float: right;
     width: 90px;
     height: 30px;
     margin: 10px 0;
@@ -453,4 +456,33 @@
 }
 .person-detail-wrap{
     margin-bottom: 30px;
+}
+.choose-date,
+.choose-person,
+.choose-time{
+    opacity: 0;
+    flex: 1;
+}
+.use-stamp-recore-date{
+    width: 45%;
+}
+.choose-label-filter{
+    width: 100px;
+    max-width: 100px;
+}
+.time-button{
+    display: block;
+    width: 90px;
+    height: 30px;
+    margin: 10px 0;
+    line-height: 30px;
+    color: #fff;
+    background-color: #38adff;
+    border: 1px solid rgba(0, 140, 238, 0.72);
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+.use-stamp-record .progress-table{
+    margin-top: 0;
 }
