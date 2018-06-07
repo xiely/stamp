@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../css/dialog.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/apply-stamp-detail.css">
+</head>
+<body>
+    <div class="main">
+        <div class="main-top">
+            <div class="logo-wrap">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="" class="logo-img">
+                </div>
+                <div class="title">企业名称</div>
+            </div>
+            <div class="nav-wrap">
+                <a href="./person-list.html " class="nav-item">通讯录</a>
+                <a href="./worktable.html" class="nav-item">工作台</a>
+                <a href="javascript:;" class="nav-item">增值服务</a>
+                <a href="./setting.html" class="nav-item nav-item-active">设置</a>
+                <a href="javascript:;" class="nav-item">退出</a>
+            </div>
+        </div>
+        <div class="apply-stamp-detail-content">
+            <div class="apply-stamp-detail-main" id="apply-stamp-detail">
+                <div class="apply-stamp-nav boring-tab-handles">
+                    <div class="apply-stamp-nav-item">企业设置</div>
+                    <div class="apply-stamp-nav-item">通讯录设置</div>
+                    <div class="apply-stamp-nav-item">邀请短信设置</div>
+                    <div class="apply-stamp-nav-item">修改登录设置</div>
+                    <div class="apply-stamp-nav-item">印章设置</div>
+                </div>
+                <div class="apply-stamp-items boring-tab-panels">
+
+                    <div class="apply-stamp-item">
+                        <div class="item-title">企业名称和logo设置</div>
+                        <div class="history-item">
+                            <span class="red-star">*</span>
+                            <span>企业名称：</span>
+                            <input type="text" class="ui-input">
+                        </div>
+                        <div class="history-item">
+                            <span>企业logo上传：</span>
+                            <input type="file">
+                        </div>
+                        <div class="oprts">
+                            <button type="button" class="oprt save-btn">保存</button>
+                            <button type="button" class="oprt cancel-btn">取消</button>
+                        </div>
+                    </div>
+
+                    <div class="apply-stamp-item">
+                        <div class="item-title">历史选择(常用)</div>
+                        <div class="">公章</div>
+                        <div class="">法人章</div>
+                        <div id="choose-stamp-type" class="apply-stamp-select">
+                            <select name="" id="" class="department-selects">
+                                <option value="">请选择</option>
+                                <option value="公章">公章</option>
+                                <option value="法人章1">法人章1</option>
+                                <option value="法人章2">法人章2</option>
+                                <option value="法人章3">法人章3</option>
+                                <option value="法人章4">法人章4</option>
+                            </select>
+                        </div>
+                        <div class="oprts">
+                            <button type="button" class="oprt save-btn">保存</button>
+                            <button type="button" class="oprt cancel-btn">取消</button>
+                        </div>
+                    </div>
+
+                    <div class="apply-stamp-item">
+                        <div class="item-title">历史选择(常用)</div>
+                        <div class="">人工智能科技公章1</div>
+                        <div class="">人工智能科技公章2</div>
+                        <div id="choose-stamp-name" class="apply-stamp-select">
+                            <select name="" id="" class="department-selects">
+                                <option value="">请选择</option>
+                                <option value="人工智能科技公章1">人工智能科技公章1</option>
+                                <option value="人工智能科技公章2">人工智能科技公章2</option>
+                                <option value="人工智能科技公章3">人工智能科技公章3</option>
+                                <option value="人工智能科技公章4">人工智能科技公章4</option>
+                                <option value="人工智能科技公章5">人工智能科技公章5</option>
+                            </select>
+                        </div>
+                        <div class="oprts">
+                            <button type="button" class="oprt save-btn">保存</button>
+                            <button type="button" class="oprt cancel-btn">取消</button>
+                        </div>
+                    </div>
+
+                    <div class="apply-stamp-item">
+                        <div class="item-title">用章原因</div>
+                        <textarea class="item-textarea" placeholder="请输入用章原因"></textarea>
+                        <div class="item-title">用章次数</div>
+                        <input type="number" placeholder="请输入用章次数" min="1" value="1" class="user-stamp-number">
+                        <div class="oprts">
+                            <button type="button" class="oprt save-btn">保存</button>
+                            <button type="button" class="oprt cancel-btn">取消</button>
+                        </div>
+                    </div>
+
+                    <div class="apply-stamp-item">
+                        <div id="verify-people" class="verify-or-copy">
+                            <select name="" id="" class="verify-or-copy-selects">
+                                <option value="">审批人</option>
+                                <option value="张鑫旭1">张鑫旭1</option>
+                                <option value="张鑫旭2">张鑫旭2</option>
+                                <option value="张鑫旭3">张鑫旭3</option>
+                                <option value="张鑫旭4">张鑫旭4</option>
+                                <option value="张鑫旭5">张鑫旭5</option>
+                            </select>
+                        </div>
+                        <div id="copy-people" class="verify-or-copy">
+                            <select name="" id="" class="verify-or-copy-selects">
+                                <option value="">抄送人</option>
+                                <option value="阮一峰1">阮一峰1</option>
+                                <option value="阮一峰2">阮一峰2</option>
+                                <option value="阮一峰3">阮一峰3</option>
+                                <option value="阮一峰4">阮一峰4</option>
+                                <option value="阮一峰5">阮一峰5</option>
+                            </select>
+                        </div>
+                        <div class="oprts">
+                            <button type="button" class="oprt save-btn">保存</button>
+                            <button type="button" class="oprt cancel-btn">取消</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script type="text/javascript">
+        (function() {
+            boring.tab("apply-stamp-detail")
+        }())
+        document.addEventListener("click", function() {
+            console.log(document.querySelector(".user-stamp-number").value);
+        })
+    </script>
+</body>
+</html>
