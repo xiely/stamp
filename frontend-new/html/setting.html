@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/dialog.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/apply-stamp-detail.css">
+    <link rel="stylesheet" href="../css/setting.css">
 </head>
 <body>
     <div class="main">
@@ -55,18 +56,52 @@
                     </div>
 
                     <div class="apply-stamp-item">
-                        <div class="item-title">历史选择(常用)</div>
-                        <div class="">公章</div>
-                        <div class="">法人章</div>
-                        <div id="choose-stamp-type" class="apply-stamp-select">
-                            <select name="" id="" class="department-selects">
-                                <option value="">请选择</option>
-                                <option value="公章">公章</option>
-                                <option value="法人章1">法人章1</option>
-                                <option value="法人章2">法人章2</option>
-                                <option value="法人章3">法人章3</option>
-                                <option value="法人章4">法人章4</option>
-                            </select>
+                        <div class="item-title">企业通讯录信息</div>
+                        <div class="item-value-wrap">
+                            <div class="item">部门</div>
+                            <div class="item">职位</div>
+                            <div class="item">姓名</div>
+                            <div class="item">性别</div>
+                            <div class="item">工号</div>
+                            <div class="item">是否为部门主管</div>
+                            <div class="item">手机号</div>
+                        </div>
+                        <div class="add-item-wrap">
+                            <input type="text" class="ui-input add-item-input" placeholder="请输入您想了解的通讯信息">
+                            <div class="add-item-btn"></div>
+                        </div>
+                        <div class="item-title">个人详细信息页面展示字段</div>
+                        <div class="choose-item-wrap">
+                            <label class="choose-item" for="name">
+                                <input name="item" type="checkbox" id="name" value="name">姓名
+                            </label>
+                            <label class="choose-item" for="email">
+                                <input name="item" type="checkbox" id="email" value="email">邮箱
+                            </label>
+                            <label class="choose-item" for="department">
+                                <input name="item" type="checkbox" id="department" value="department">部门
+                            </label>
+                            <label class="choose-item" for="position">
+                                <input name="item" type="checkbox" id="position" value="position">职位
+                            </label>
+                            <label class="choose-item" for="gender">
+                                <input name="item" type="checkbox" id="gender" value="gender">性别
+                            </label>
+                            <label class="choose-item" for="job-number">
+                                <input name="item" type="checkbox" id="job-number" value="job-number">工号
+                            </label>
+                            <label class="choose-item" for="phone">
+                                <input name="item" type="checkbox" id="phone" value="phone">手机号
+                            </label>
+                            <label class="choose-item" for="office-location">
+                                <input name="item" type="checkbox" id="office-location" value="office-location">办公地点
+                            </label>
+                            <label class="choose-item" for="remark">
+                                <input name="item" type="checkbox" id="remark" value="remark">备注
+                            </label>
+                            <label class="choose-item" for="hiredate">
+                                <input name="item" type="checkbox" id="hiredate" value="hiredate">入职时间
+                            </label>
                         </div>
                         <div class="oprts">
                             <button type="button" class="oprt save-btn">保存</button>
