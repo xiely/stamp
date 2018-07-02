@@ -114,11 +114,16 @@
                             1.模板最多40个字，请勿在短信模板中涉及任何违禁词语。<br/>
                             2.设置自定义邀请需智鉴审核，每月2次修改。
                         </div>
-                        <div class="current-tip">
-                            <div class="title">当前使用的短信文案。</div>
+                        <div class="content-item">
+                            <div class="">当前使用的短信文案。</div>
                             <div class="current-tip-content">
-                                [智能印章] #对方姓名# #企业名称# #都在使用智能印章进行印章安全管控
+                                [智能印章] #对方姓名# #企业名称# 都在使用智能印章进行印章安全管控,<br/>>
+                                #管理员姓名#邀请你赶紧加入。下载地址： <a href="http://">http://</a>
                             </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="item-wrap">设置短信文案<input type="text" class="message-text" /></div>
+                            <div>[智能印章]<input type="text" class="message-text" /><span>下载地址：</span></div>
                         </div>
                         <div class="oprts">
                             <button type="button" class="oprt save-btn">保存</button>
@@ -127,14 +132,7 @@
                     </div>
 
                     <div class="apply-stamp-item">
-                        <div class="item-title">用章原因</div>
-                        <textarea class="item-textarea" placeholder="请输入用章原因"></textarea>
-                        <div class="item-title">用章次数</div>
-                        <input type="number" placeholder="请输入用章次数" min="1" value="1" class="user-stamp-number">
-                        <div class="oprts">
-                            <button type="button" class="oprt save-btn">保存</button>
-                            <button type="button" class="oprt cancel-btn">取消</button>
-                        </div>
+                        <div onclick="showLoginModal()" class="edit-pass-word">修改密码</div>
                     </div>
 
                     <div class="apply-stamp-item">
@@ -168,6 +166,30 @@
             </div>
         </div>
     </div>
+    <div class="dialog boring-dialog notice-dialog" id="confirm-dialog">
+        <div class="notice">
+            <h2 class="notice-title">修改密码</h2>
+            <label class="pass-word-label">
+                <span class="label-title">原密码</span>
+                <span class="red-star">*</span>
+                <input type="text" placeholder="请输入原密码" class="pass-word-text">
+            </label>
+            <label class="pass-word-label">
+                <span class="label-title">新密码</span>
+                <span class="red-star">*</span>
+                <input type="text" placeholder="请输入新密码" class="pass-word-text">
+            </label>
+            <label class="pass-word-label">
+                <span class="label-title">确认密码</span>
+                <span class="red-star">*</span>
+                <input type="text" placeholder="请输入新密码" class="pass-word-text">
+            </label>
+        </div>
+        <div class="oprts">
+            <button type="button" class="oprt save-btn boring-dialog-closer">确定</button>
+            <button type="button" class="oprt cancel-btn boring-dialog-closer">取消</button>
+        </div>
+    </div>
     <script src="../js/common.js"></script>
     <script type="text/javascript">
         (function() {
@@ -176,6 +198,9 @@
         document.addEventListener("click", function() {
             console.log(document.querySelector(".user-stamp-number").value);
         })
+        function showLoginModal() {
+            boring.dialog('confirm-dialog').open();
+        }
     </script>
 </body>
 </html>

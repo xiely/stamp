@@ -50,6 +50,9 @@
     padding: 10px 20px;
     border-bottom: 1px solid #ebebeb;
 }
+.apply-stamp-nav-item:nth-child(1) {
+    border-top: 1px solid #ebebeb;
+}
 .apply-stamp-nav-item.boring-tab-current{
     background-color: #eff9ff;
 }
@@ -320,7 +323,7 @@
 .reason{
     margin: 20px;
     padding: 4px 10px;
-    border: 1px solid #cccc;
+    border: 1px solid #ccc;
     border-radius: 4px;
 }
 .oprts{
@@ -485,4 +488,41 @@
 }
 .use-stamp-record .progress-table{
     margin-top: 0;
+}
+.content-item{
+    margin: 20px 0;
+}
+.message-text{
+    margin-left: 10px;
+    padding: 0 10px;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.item-wrap{
+    margin-bottom: 4px;
+}
+.edit-pass-word{
+    cursor: pointer;
+}
+.pass-word-label{
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.label-title{
+    display: inline-block;
+    width: 4em;
+    text-align: right;
+}
+.pass-word-text{
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0 4px;
 }
